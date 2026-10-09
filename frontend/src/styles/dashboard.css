@@ -1,0 +1,390 @@
+/* =========================================
+   Dashboard Page
+========================================= */
+
+.dashboard-page {
+  width: 100%;
+  padding: 28px;
+}
+
+
+/* =========================================
+   Dashboard Header
+========================================= */
+
+.dashboard-header {
+  margin-bottom: 24px;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #14532d;
+}
+
+.dashboard-header p {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+
+/* =========================================
+   Summary Cards
+========================================= */
+
+.dashboard-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+
+/* =========================================
+   Summary Card
+========================================= */
+
+.summary-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  min-height: 115px;
+  padding: 20px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #dcfce7;
+  border-radius: 12px;
+
+  box-shadow: 0 3px 10px rgba(20, 83, 45, 0.06);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 8px 20px rgba(20, 83, 45, 0.12);
+}
+
+
+/* =========================================
+   Summary Card Icon
+========================================= */
+
+.summary-card-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background-color: #dcfce7;
+  color: #166534;
+
+  border-radius: 10px;
+}
+
+.summary-card-icon svg {
+  font-size: 27px;
+}
+
+
+/* =========================================
+   Summary Card Content
+========================================= */
+
+.summary-card-content {
+  min-width: 0;
+}
+
+.summary-card-title {
+  margin: 0;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  color: #64748b;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.summary-card-value {
+  margin: 5px 0 0;
+
+  font-size: 26px;
+  font-weight: 700;
+
+  color: #14532d;
+}
+
+.summary-card-subtitle {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+
+/* =========================================
+   Dashboard Section
+========================================= */
+
+.dashboard-section {
+  width: 100%;
+}
+
+.dashboard-section-header {
+  margin-bottom: 16px;
+}
+
+.dashboard-section-header h2 {
+  margin: 0;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  color: #14532d;
+}
+
+.dashboard-section-header p {
+  margin-top: 5px;
+
+  font-size: 13px;
+  color: #64748b;
+}
+
+
+/* =========================================
+   Chart + Table Layout
+========================================= */
+
+.dashboard-response-grid {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1.6fr)
+                         minmax(320px, 1fr);
+
+  gap: 20px;
+}
+
+
+/* =========================================
+   Dashboard Panels
+========================================= */
+
+.dashboard-panel {
+  min-width: 0;
+
+  padding: 20px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #dcfce7;
+  border-radius: 12px;
+
+  box-shadow:
+    0 3px 10px rgba(20, 83, 45, 0.06);
+}
+
+.dashboard-panel h3 {
+  margin: 0 0 18px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  color: #14532d;
+}
+
+
+/* =========================================
+   Response Chart
+========================================= */
+
+.response-chart {
+  position: relative;
+
+  width: 100%;
+  height: 330px;
+}
+
+
+/* =========================================
+   Form Response Table
+========================================= */
+
+.form-response-table {
+  width: 100%;
+
+  max-height: 330px;
+
+  overflow-y: auto;
+}
+
+.form-response-table .MuiTableHead-root {
+  background-color: #f0fdf4;
+}
+
+.form-response-table .MuiTableCell-head {
+  color: #166534;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.form-response-table .MuiTableCell-body {
+  font-size: 13px;
+  color: #334155;
+}
+
+.form-response-table .MuiTableRow-hover:hover {
+  background-color: #f0fdf4;
+}
+
+
+/* =========================================
+   Loading State
+========================================= */
+
+.dashboard-loading {
+  min-height: 400px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+}
+
+.dashboard-loading p {
+  margin: 0;
+
+  font-size: 14px;
+  color: #64748b;
+}
+
+
+/* =========================================
+   Error State
+========================================= */
+
+.dashboard-error {
+  padding: 28px;
+}
+
+
+/* =========================================
+   Tablet
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .dashboard-summary-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .dashboard-response-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .response-chart {
+    height: 320px;
+  }
+
+}
+
+
+/* =========================================
+   Small Tablet
+========================================= */
+
+@media (max-width: 800px) {
+
+  .dashboard-page {
+    padding: 22px;
+  }
+
+  .dashboard-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================
+   Mobile
+========================================= */
+
+@media (max-width: 600px) {
+
+  .dashboard-page {
+    padding: 16px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 24px;
+  }
+
+  .dashboard-summary-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .summary-card {
+    min-height: 100px;
+  }
+
+  .dashboard-panel {
+    padding: 16px;
+  }
+
+  .response-chart {
+    height: 280px;
+  }
+
+}
+
+
+/* =========================================
+   Small Mobile
+========================================= */
+
+@media (max-width: 400px) {
+
+  .dashboard-page {
+    padding: 12px;
+  }
+
+  .summary-card {
+    padding: 16px;
+  }
+
+  .summary-card-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .summary-card-value {
+    font-size: 23px;
+  }
+
+  .dashboard-panel h3 {
+    font-size: 15px;
+  }
+
+}

@@ -1,0 +1,311 @@
+css
+/* =========================================
+   Exports Page
+========================================= */
+
+.exports-page {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 28px;
+  box-sizing: border-box;
+  color: #1f2937;
+}
+
+/* =========================================
+   Page Header
+========================================= */
+
+.exports-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.exports-page-title.MuiTypography-root {
+  margin-bottom: 8px;
+  color: #166534;
+  font-size: 1.85rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.3;
+}
+
+/* =========================================
+   Create Export Section
+========================================= */
+
+.create-export-section {
+  margin-bottom: 30px;
+}
+
+.create-export-section .MuiCard-root {
+  overflow: visible;
+  border: 1px solid #e2e8e5;
+  border-radius: 14px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 12px rgba(22, 101, 52, 0.05);
+  transition:
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.create-export-section .MuiCard-root:hover {
+  border-color: #c5dfce;
+  box-shadow: 0 5px 18px rgba(22, 101, 52, 0.09);
+}
+
+.create-export-section .MuiCardContent-root {
+  padding: 26px;
+}
+
+.create-export-section .MuiCardContent-root:last-child {
+  padding-bottom: 26px;
+}
+
+/* Section headings */
+
+.create-export-section .MuiTypography-h6,
+.export-history-section .MuiTypography-h6 {
+  color: #166534;
+  font-weight: 700;
+}
+
+/* =========================================
+   Form Controls
+========================================= */
+
+.create-export-section .MuiFormControl-root {
+  width: 100%;
+}
+
+.create-export-section .MuiInputLabel-root.Mui-focused {
+  color: #15803d;
+}
+
+.create-export-section .MuiOutlinedInput-root {
+  border-radius: 9px;
+  background-color: #ffffff;
+}
+
+.create-export-section
+  .MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #15803d;
+  border-width: 2px;
+}
+
+.create-export-section .MuiFormLabel-root {
+  margin-bottom: 8px;
+  color: #374151;
+  font-weight: 600;
+}
+
+.create-export-section .MuiRadio-root {
+  color: #9ca3af;
+}
+
+.create-export-section .MuiRadio-root.Mui-checked {
+  color: #15803d;
+}
+
+.create-export-section .MuiFormControlLabel-label {
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+/* =========================================
+   Buttons
+========================================= */
+
+.create-export-section .MuiButton-contained {
+  min-height: 42px;
+  padding: 9px 20px;
+  border-radius: 9px;
+  background-color: #15803d;
+  box-shadow: none;
+  font-weight: 600;
+  text-transform: none;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.create-export-section .MuiButton-contained:hover {
+  background-color: #166534;
+  box-shadow: 0 4px 10px rgba(22, 101, 52, 0.18);
+}
+
+.create-export-section .MuiButton-contained:active {
+  transform: translateY(1px);
+}
+
+.export-history-section .MuiButton-outlined {
+  min-height: 36px;
+  border-color: #bbd9c4;
+  border-radius: 8px;
+  color: #166534;
+  font-weight: 600;
+  text-transform: none;
+}
+
+.export-history-section .MuiButton-outlined:hover {
+  border-color: #15803d;
+  background-color: #f0fdf4;
+}
+
+/* =========================================
+   Export History Table
+========================================= */
+
+.export-history-section {
+  width: 100%;
+  min-width: 0;
+}
+
+.export-history-section .MuiTableContainer-root {
+  overflow-x: auto;
+  border: 1px solid #e2e8e5;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 12px rgba(22, 101, 52, 0.04);
+}
+
+.export-history-section .MuiTable-root {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.export-history-section .MuiTableHead-root {
+  background-color: #f0fdf4;
+}
+
+.export-history-section .MuiTableHead-root .MuiTableCell-root {
+  padding: 15px 16px;
+  border-bottom: 1px solid #dcebe0;
+  color: #166534;
+  font-size: 0.82rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.export-history-section .MuiTableBody-root .MuiTableCell-root {
+  padding: 15px 16px;
+  border-bottom: 1px solid #edf2ee;
+  color: #374151;
+  font-size: 0.9rem;
+}
+
+.export-history-section .MuiTableBody-root .MuiTableRow-root:last-child .MuiTableCell-root {
+  border-bottom: none;
+}
+
+.export-history-section .MuiTableBody-root .MuiTableRow-root {
+  transition: background-color 0.15s ease;
+}
+
+.export-history-section .MuiTableBody-root .MuiTableRow-root:hover {
+  background-color: #f8fcf9;
+}
+
+/* Export ID */
+
+.export-history-section .MuiTableBody-root .MuiTableCell-root:first-child {
+  color: #166534;
+  font-weight: 600;
+}
+
+/* Download button */
+
+.export-history-section .MuiTableCell-root .MuiButton-root {
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: none;
+}
+
+.export-history-section .MuiTableCell-root .MuiButton-root.Mui-disabled {
+  border-color: #e5e7eb;
+  color: #9ca3af;
+}
+
+/* =========================================
+   Alerts and Empty States
+========================================= */
+
+.exports-page .MuiAlert-root {
+  border-radius: 10px;
+}
+
+.export-history-section .MuiCircularProgress-root {
+  color: #15803d;
+}
+
+/* =========================================
+   Responsive Layout
+========================================= */
+
+@media (max-width: 900px) {
+  .exports-page {
+    padding: 22px;
+  }
+
+  .exports-page-header {
+    margin-bottom: 24px;
+  }
+
+  .create-export-section .MuiCardContent-root {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .exports-page {
+    padding: 16px;
+  }
+
+  .exports-page-header {
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .exports-page-title.MuiTypography-root {
+    font-size: 1.55rem;
+  }
+
+  .create-export-section {
+    margin-bottom: 22px;
+  }
+
+  .create-export-section .MuiCardContent-root {
+    padding: 18px;
+  }
+
+  .create-export-section .MuiCardContent-root:last-child {
+    padding-bottom: 18px;
+  }
+
+  .create-export-section .MuiFormControlLabel-root {
+    margin-right: 10px;
+  }
+
+  .create-export-section .MuiButton-contained {
+    width: 100%;
+  }
+
+  .export-history-section .MuiTableHead-root .MuiTableCell-root,
+  .export-history-section .MuiTableBody-root .MuiTableCell-root {
+    padding: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .create-export-section .MuiCard-root,
+  .create-export-section .MuiButton-contained,
+  .export-history-section .MuiTableBody-root .MuiTableRow-root {
+    transition: none;
+  }
+}
+

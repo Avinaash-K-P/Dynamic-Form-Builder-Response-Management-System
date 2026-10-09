@@ -1,0 +1,925 @@
+/* =========================================
+   FORM BUILDER PAGE
+========================================= */
+
+.form-builder-page {
+  width: 100%;
+  min-height: calc(100vh - 120px);
+  padding: 24px;
+  background: #f0fdf4;
+}
+
+
+/* =========================================
+   BUILDER HEADER
+========================================= */
+
+.form-builder-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+  padding: 20px 24px;
+  background: #ffffff;
+  border: 1px solid #d1fae5;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(20, 83, 45, 0.06);
+}
+
+.form-builder-header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.form-builder-back-button {
+  flex-shrink: 0;
+}
+
+.form-builder-title-section {
+  min-width: 0;
+}
+
+.form-builder-title {
+  color: #14532d;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.form-builder-subtitle {
+  margin-top: 4px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.form-builder-status {
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   BUILDER CONTENT
+========================================= */
+
+.form-builder-content {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+
+/* =========================================
+   FIELD TYPES PANEL
+========================================= */
+
+.form-builder-sidebar {
+  position: sticky;
+  top: 90px;
+}
+
+.field-types-panel {
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #d1fae5;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(20, 83, 45, 0.06);
+}
+
+.field-types-title {
+  margin-bottom: 4px;
+  color: #14532d;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.field-types-description {
+  margin-bottom: 16px;
+  color: #6b7280;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.field-types-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field-type-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 11px 12px;
+  background: #f0fdf4;
+  border: 1px solid #dcfce7;
+  border-radius: 8px;
+  color: #166534;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.field-type-item:hover {
+  background: #dcfce7;
+  border-color: #86efac;
+  box-shadow: 0 2px 6px rgba(20, 83, 45, 0.08);
+  transform: translateY(-1px);
+}
+
+.field-type-item:active {
+  transform: translateY(0);
+}
+
+.field-type-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  background: #ffffff;
+  border-radius: 6px;
+  color: #166534;
+}
+
+.field-type-label {
+  flex: 1;
+  text-align: left;
+}
+
+
+/* =========================================
+   FORM FIELDS WORKSPACE
+========================================= */
+
+.form-builder-workspace {
+  min-width: 0;
+}
+
+.form-fields-panel {
+  min-height: 500px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #d1fae5;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(20, 83, 45, 0.06);
+}
+
+.form-fields-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ecfdf5;
+}
+
+.form-fields-title {
+  color: #14532d;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.form-fields-count {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+
+/* =========================================
+   FIELD LIST
+========================================= */
+
+.form-fields-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-field-item {
+  width: 100%;
+}
+
+
+/* =========================================
+   DRAG AND DROP STATES
+========================================= */
+
+.form-field-item.dragging {
+  opacity: 0.65;
+}
+
+.form-field-item.drag-over {
+  border-radius: 10px;
+  outline: 2px dashed #22c55e;
+  outline-offset: 3px;
+}
+
+.form-fields-drop-zone {
+  min-height: 100px;
+  padding: 24px;
+  border: 2px dashed #bbf7d0;
+  border-radius: 10px;
+  background: #f0fdf4;
+  text-align: center;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.form-fields-drop-zone:hover {
+  background: #ecfdf5;
+  border-color: #86efac;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.form-builder-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 360px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.form-builder-empty-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 16px;
+  background: #dcfce7;
+  border-radius: 50%;
+  color: #166534;
+}
+
+.form-builder-empty-title {
+  margin-bottom: 6px;
+  color: #1f2937;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.form-builder-empty-text {
+  max-width: 420px;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   BUILDER LOADING
+========================================= */
+
+.form-builder-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+
+/* =========================================
+   BUILDER ERROR
+========================================= */
+
+.form-builder-error {
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  color: #b91c1c;
+  text-align: center;
+}
+
+
+/* =========================================
+   ADD FIELD BUTTON AREA
+========================================= */
+
+.form-builder-add-field {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid #ecfdf5;
+}
+
+
+/* =========================================
+   CONFIGURATION SECTION
+========================================= */
+
+.form-builder-configuration {
+  margin-top: 24px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #d1fae5;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(20, 83, 45, 0.06);
+}
+
+.form-builder-configuration-title {
+  margin-bottom: 16px;
+  color: #14532d;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.form-builder-configuration-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.form-builder-configuration-item {
+  padding: 14px;
+  background: #f0fdf4;
+  border: 1px solid #dcfce7;
+  border-radius: 8px;
+  color: #166534;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .form-builder-content {
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .form-builder-page {
+    padding: 18px;
+  }
+
+  .form-builder-header {
+    padding: 18px;
+  }
+
+  .field-types-panel,
+  .form-fields-panel,
+  .form-builder-configuration {
+    padding: 16px;
+  }
+
+  .form-builder-configuration-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .form-builder-page {
+    padding: 14px;
+  }
+
+  .form-builder-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .form-builder-header-left {
+    align-items: flex-start;
+  }
+
+  .form-builder-title {
+    font-size: 19px;
+    white-space: normal;
+  }
+
+  .form-builder-status {
+    align-self: flex-start;
+  }
+
+  .form-builder-content {
+    grid-template-columns: 1fr;
+  }
+
+  .form-builder-sidebar {
+    position: static;
+  }
+
+  .field-types-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .form-fields-panel {
+    min-height: 400px;
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE - SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .form-builder-page {
+    padding: 10px;
+  }
+
+  .form-builder-header {
+    padding: 14px;
+  }
+
+  .form-builder-header-left {
+    gap: 8px;
+  }
+
+  .field-types-panel,
+  .form-fields-panel,
+  .form-builder-configuration {
+    padding: 14px;
+  }
+
+  .field-types-list {
+    grid-template-columns: 1fr;
+  }
+
+  .form-fields-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .form-builder-empty {
+    min-height: 300px;
+    padding: 30px 14px;
+  }
+}
+
+/* =========================================
+   ADD FIELD MODAL
+========================================= */
+
+.add-field-modal .MuiDialog-paper {
+  border-radius: 14px;
+  border: 1px solid #d1fae5;
+  box-shadow: 0 12px 35px rgba(20, 83, 45, 0.15);
+  overflow: hidden;
+}
+
+
+/* =========================================
+   ADD FIELD MODAL HEADER
+========================================= */
+
+.add-field-modal .MuiDialogTitle-root {
+  padding: 18px 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #ecfdf5;
+}
+
+
+/* =========================================
+   ADD FIELD MODAL CONTENT
+========================================= */
+
+.add-field-modal .MuiDialogContent-root {
+  padding: 24px;
+  background: #ffffff;
+}
+
+.add-field-modal .MuiDialogContent-dividers {
+  border-top: none;
+  border-bottom: none;
+}
+
+
+/* =========================================
+   TEXT FIELDS
+========================================= */
+
+.add-field-modal .MuiTextField-root .MuiOutlinedInput-root {
+  border-radius: 8px;
+}
+
+.add-field-modal
+  .MuiTextField-root
+  .MuiOutlinedInput-root:hover
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #86efac;
+}
+
+.add-field-modal
+  .MuiTextField-root
+  .MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #166534;
+  border-width: 2px;
+}
+
+.add-field-modal .MuiInputLabel-root.Mui-focused {
+  color: #166534;
+}
+
+
+/* =========================================
+   SELECT CONTROLS
+========================================= */
+
+.add-field-modal .MuiFormControl-root .MuiOutlinedInput-root {
+  border-radius: 8px;
+}
+
+.add-field-modal
+  .MuiFormControl-root
+  .MuiOutlinedInput-root:hover
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #86efac;
+}
+
+.add-field-modal
+  .MuiFormControl-root
+  .MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #166534;
+  border-width: 2px;
+}
+
+.add-field-modal .MuiInputLabel-root.Mui-focused {
+  color: #166534;
+}
+
+
+/* =========================================
+   CHECKBOX
+========================================= */
+
+.add-field-modal .MuiCheckbox-root {
+  color: #86efac;
+}
+
+.add-field-modal .MuiCheckbox-root.Mui-checked {
+  color: #166534;
+}
+
+
+/* =========================================
+   SWITCH
+========================================= */
+
+.add-field-modal .MuiSwitch-switchBase.Mui-checked {
+  color: #166534;
+}
+
+.add-field-modal
+  .MuiSwitch-switchBase.Mui-checked
+  + .MuiSwitch-track {
+  background-color: #22c55e;
+  opacity: 1;
+}
+
+
+/* =========================================
+   DIALOG ACTIONS
+========================================= */
+
+.add-field-modal .MuiDialogActions-root {
+  padding: 16px 24px;
+  background: #ffffff;
+  border-top: 1px solid #ecfdf5;
+}
+
+
+/* =========================================
+   BUTTON HOVER
+========================================= */
+
+.add-field-modal .MuiDialogActions-root .MuiButton-root {
+  border-radius: 8px;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.add-field-modal
+  .MuiDialogActions-root
+  .MuiButton-contained:hover {
+  box-shadow: 0 4px 10px rgba(20, 83, 45, 0.18);
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   VALIDATION SECTION
+========================================= */
+
+.add-field-modal .validation-section {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #dcfce7;
+}
+
+.add-field-modal .validation-section-title {
+  margin-bottom: 16px;
+  color: #14532d;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   CONDITIONAL LOGIC SECTION
+========================================= */
+
+.add-field-modal .conditional-section {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #dcfce7;
+}
+
+.add-field-modal .conditional-section-title {
+  margin-bottom: 8px;
+  color: #14532d;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   HELPER TEXT
+========================================= */
+
+.add-field-modal .MuiFormHelperText-root {
+  margin-left: 4px;
+  font-size: 11px;
+}
+
+
+/* =========================================
+   ERROR STATE
+========================================= */
+
+.add-field-modal
+  .MuiOutlinedInput-root.Mui-error
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #dc2626;
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 768px) {
+  .add-field-modal .MuiDialog-paper {
+    margin: 12px;
+    width: calc(100% - 24px);
+  }
+
+  .add-field-modal .MuiDialogTitle-root {
+    padding: 16px 18px;
+  }
+
+  .add-field-modal .MuiDialogContent-root {
+    padding: 18px;
+  }
+
+  .add-field-modal .MuiDialogActions-root {
+    padding: 14px 18px;
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .add-field-modal .MuiDialog-paper {
+    margin: 8px;
+    width: calc(100% - 16px);
+    max-height: calc(100% - 16px);
+    border-radius: 10px;
+  }
+
+  .add-field-modal .MuiDialogTitle-root {
+    padding: 14px 16px;
+  }
+
+  .add-field-modal .MuiDialogContent-root {
+    padding: 16px;
+  }
+
+  .add-field-modal .MuiDialogActions-root {
+    flex-wrap: wrap;
+    padding: 12px 16px;
+  }
+}
+
+/* =========================================================
+   BUILDER PAGE POLISH
+   ========================================================= */
+
+/* Back to Forms button */
+.form-builder-back {
+  border: none;
+  background: transparent;
+  color: #166534;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.form-builder-back:hover {
+  background: #dcfce7;
+  color: #14532d;
+}
+
+/* Form status button */
+.form-builder-status {
+  border: none;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.form-builder-status.active {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.form-builder-status.active:hover {
+  background: #bbf7d0;
+}
+
+.form-builder-status.inactive {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.form-builder-status.inactive:hover {
+  background: #e5e7eb;
+}
+
+/* Field type buttons */
+.field-type-item {
+  border: 1px solid transparent;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.field-type-item:hover {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+  transform: translateX(2px);
+}
+
+.field-type-item:active {
+  transform: translateX(1px);
+}
+
+/* Field type icon */
+.field-type-icon {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.field-type-item:hover .field-type-icon {
+  background: #166534;
+  color: #ffffff;
+}
+
+/* Add Field button */
+.form-builder-add-field {
+  border: none;
+  background: #166534;
+  color: #ffffff;
+  padding: 9px 16px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-builder-add-field:hover {
+  background: #14532d;
+  box-shadow: 0 3px 8px rgba(20, 83, 45, 0.18);
+  transform: translateY(-1px);
+}
+
+.form-builder-add-field:active {
+  transform: translateY(0);
+}
+
+/* Empty state Add Field button */
+.form-builder-empty .form-builder-add-field {
+  margin-top: 18px;
+}
+
+/* Error container */
+.form-builder-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 280px;
+  padding: 30px;
+  text-align: center;
+  color: #991b1b;
+}
+
+.form-builder-error p {
+  margin: 0;
+  font-size: 15px;
+}
+
+/* Retry button */
+.form-builder-error button {
+  border: none;
+  background: #166534;
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.form-builder-error button:hover {
+  background: #14532d;
+  transform: translateY(-1px);
+}
+
+/* Loading state */
+.form-builder-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  color: #166534;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Field count */
+.form-fields-count {
+  display: inline-block;
+  margin-top: 3px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* Empty state icon */
+.form-builder-empty-icon {
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.form-builder-empty:hover .form-builder-empty-icon {
+  background: #bbf7d0;
+  transform: scale(1.04);
+}

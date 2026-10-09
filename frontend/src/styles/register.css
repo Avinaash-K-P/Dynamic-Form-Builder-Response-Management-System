@@ -1,0 +1,308 @@
+/* ================================
+   Register Page
+================================ */
+
+.register-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+  background: linear-gradient(
+    135deg,
+    #f0fdf4 0%,
+    #f8fafc 50%,
+    #ecfdf5 100%
+  );
+  box-sizing: border-box;
+}
+
+/* ================================
+   Register Card
+================================ */
+
+.register-card {
+  width: 100%;
+  max-width: 460px;
+  padding: 36px;
+  background-color: #ffffff;
+  border: 1px solid #e5eee7;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(22, 101, 52, 0.09);
+  box-sizing: border-box;
+  transition: box-shadow 0.25s ease;
+}
+
+.register-card:hover {
+  box-shadow: 0 16px 42px rgba(22, 101, 52, 0.13);
+}
+
+/* ================================
+   Header
+================================ */
+
+.register-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.register-title {
+  color: #166534;
+  font-size: 30px !important;
+  font-weight: 750 !important;
+  line-height: 1.3 !important;
+  letter-spacing: -0.7px !important;
+  margin-bottom: 10px !important;
+}
+
+.register-subtitle {
+  color: #64748b;
+  font-size: 14px !important;
+  line-height: 1.7 !important;
+  margin-top: 8px !important;
+}
+
+/* ================================
+   Error Message
+================================ */
+
+.register-card .MuiAlert-root {
+  margin-bottom: 18px;
+  border-radius: 9px;
+  font-size: 13px;
+  align-items: center;
+}
+
+/* ================================
+   Register Form
+================================ */
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.register-form .MuiTextField-root {
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.register-form .MuiInputLabel-root {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.register-form .MuiOutlinedInput-root {
+  min-height: 50px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.register-form .MuiOutlinedInput-notchedOutline {
+  border-color: #d7e3da;
+  transition: border-color 0.2s ease;
+}
+
+.register-form .MuiOutlinedInput-root:hover
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #86b99a;
+}
+
+.register-form .MuiOutlinedInput-root.Mui-focused {
+  background-color: #fbfffc;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.08);
+}
+
+.register-form .MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #16a34a;
+  border-width: 1.5px;
+}
+
+.register-form .MuiInputBase-input {
+  font-size: 14px;
+  color: #1f2937;
+}
+
+.register-form .MuiSelect-select {
+  display: flex;
+  align-items: center;
+}
+
+.register-form .MuiFormHelperText-root {
+  margin-left: 3px;
+  font-size: 12px;
+}
+
+/* ================================
+   Role Dropdown
+================================ */
+
+.register-form .MuiMenuItem-root {
+  font-size: 14px;
+  color: #334155;
+}
+
+.register-form .MuiMenuItem-root.Mui-selected {
+  background-color: #f0fdf4;
+}
+
+.register-form .MuiMenuItem-root.Mui-selected:hover {
+  background-color: #dcfce7;
+}
+
+/* ================================
+   Register Button
+================================ */
+
+.register-button {
+  min-height: 49px;
+  margin-top: 20px !important;
+  padding: 12px 18px !important;
+  border-radius: 10px !important;
+  background: linear-gradient(
+    135deg,
+    #15803d,
+    #16a34a
+  ) !important;
+  color: #ffffff !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.2px !important;
+  text-transform: none !important;
+  box-shadow: 0 5px 12px rgba(21, 128, 61, 0.18) !important;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease !important;
+}
+
+.register-button:hover {
+  background: linear-gradient(
+    135deg,
+    #166534,
+    #15803d
+  ) !important;
+  box-shadow: 0 7px 16px rgba(21, 128, 61, 0.25) !important;
+  transform: translateY(-1px);
+}
+
+.register-button:active {
+  transform: translateY(0);
+}
+
+.register-button.Mui-disabled {
+  background: #a7cbb1 !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+  cursor: not-allowed;
+}
+
+/* ================================
+   Login Link
+================================ */
+
+.register-login {
+  margin-top: 24px;
+  text-align: center;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.register-login a {
+  color: #15803d;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 3px;
+  transition: color 0.2s ease;
+}
+
+.register-login a:hover {
+  color: #14532d;
+  text-decoration: underline;
+}
+
+/* ================================
+   Keyboard Accessibility
+================================ */
+
+.register-login a:focus-visible,
+.register-button:focus-visible {
+  outline: 3px solid rgba(22, 163, 74, 0.4);
+  outline-offset: 3px;
+}
+
+/* ================================
+   Tablet and Mobile
+================================ */
+
+@media (max-width: 600px) {
+  .register-page {
+    padding: 24px 16px;
+  }
+
+  .register-card {
+    max-width: 420px;
+    padding: 30px 24px;
+    border-radius: 15px;
+  }
+
+  .register-title {
+    font-size: 27px !important;
+  }
+
+  .register-header {
+    margin-bottom: 20px;
+  }
+
+  .register-button {
+    margin-top: 16px !important;
+  }
+}
+
+/* ================================
+   Small Mobile Screens
+================================ */
+
+@media (max-width: 360px) {
+  .register-page {
+    padding: 18px 12px;
+  }
+
+  .register-card {
+    padding: 26px 18px;
+  }
+
+  .register-title {
+    font-size: 25px !important;
+  }
+
+  .register-subtitle {
+    font-size: 13px !important;
+  }
+}
+
+/* ================================
+   Reduced Motion
+================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .register-card,
+  .register-form .MuiOutlinedInput-root,
+  .register-form .MuiOutlinedInput-notchedOutline,
+  .register-button,
+  .register-login a {
+    transition: none !important;
+  }
+
+  .register-button:hover {
+    transform: none;
+  }
+}
+

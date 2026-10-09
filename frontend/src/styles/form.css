@@ -1,0 +1,414 @@
+/* =========================================================
+   FORMS PAGE
+========================================================= */
+
+.forms-page {
+  width: 100%;
+  min-height: 100%;
+  padding: 24px;
+  background-color: #f0fdf4;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.forms-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.forms-page-title-section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.forms-page-title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #14532d;
+}
+
+.forms-page-subtitle {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.forms-create-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+/* =========================================================
+   FILTER SECTION
+========================================================= */
+
+.forms-filter-section {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   TABLE CONTAINER
+========================================================= */
+
+.forms-table-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 1px solid #dcfce7;
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.forms-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.forms-table th {
+  padding: 14px 16px;
+  background-color: #f0fdf4;
+  color: #14532d;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.forms-table td {
+  padding: 14px 16px;
+  color: #374151;
+  font-size: 14px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.forms-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.forms-table tbody tr:hover {
+  background-color: #fafffb;
+}
+
+
+/* =========================================================
+   FORM TITLE
+========================================================= */
+
+.form-table-title {
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.form-table-description {
+  max-width: 320px;
+  overflow: hidden;
+  color: #6b7280;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.form-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.form-status.active {
+  color: #166534;
+  background-color: #dcfce7;
+}
+
+.form-status.inactive {
+  color: #6b7280;
+  background-color: #f3f4f6;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.form-table-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.form-action-button {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 6px;
+  background-color: transparent;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.form-action-button:hover {
+  transform: translateY(-1px);
+}
+
+.form-action-button.edit {
+  color: #166534;
+}
+
+.form-action-button.edit:hover {
+  background-color: #dcfce7;
+}
+
+.form-action-button.builder {
+  color: #15803d;
+}
+
+.form-action-button.builder:hover {
+  background-color: #dcfce7;
+}
+
+.form-action-button.delete {
+  color: #dc2626;
+}
+
+.form-action-button.delete:hover {
+  background-color: #fee2e2;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.forms-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #dcfce7;
+  border-radius: 10px;
+}
+
+.forms-empty-state h3 {
+  margin-bottom: 8px;
+  color: #374151;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.forms-empty-state p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   PAGINATION
+========================================================= */
+
+.forms-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.forms-pagination-info {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.forms-pagination-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+
+@media (max-width: 900px) {
+  .forms-page {
+    padding: 20px;
+  }
+
+  .forms-page-title {
+    font-size: 24px;
+  }
+
+  .forms-table-container {
+    overflow-x: auto;
+  }
+
+  .forms-table {
+    min-width: 800px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .forms-page {
+    padding: 16px;
+  }
+
+  .forms-page-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .forms-page-title {
+    font-size: 22px;
+  }
+
+  .forms-create-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .forms-pagination {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .forms-pagination-actions {
+    width: 100%;
+  }
+}
+
+/* ============================= */
+/* DELETE FORM DIALOG */
+/* ============================= */
+
+.delete-form-dialog .MuiDialog-paper {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Dialog title */
+.delete-form-dialog .MuiDialogTitle-root {
+  padding: 18px 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Close button */
+.delete-form-dialog .MuiIconButton-root {
+  color: #6b7280;
+  transition: all 0.2s ease;
+}
+
+.delete-form-dialog .MuiIconButton-root:hover {
+  color: #14532d;
+  background-color: #f0fdf4;
+}
+
+/* Dialog content */
+.delete-form-dialog .MuiDialogContent-root {
+  padding: 24px 28px 12px;
+}
+
+/* Delete icon */
+.delete-form-dialog .MuiDialogContent-root > .MuiSvgIcon-root {
+  display: block;
+  margin: 0 auto 14px;
+  font-size: 52px;
+  color: #dc2626;
+}
+
+/* Main warning text */
+.delete-form-dialog .MuiDialogContent-root .MuiTypography-root {
+  text-align: center;
+}
+
+/* Form title */
+.delete-form-dialog .MuiDialogContent-root
+  .MuiTypography-root:not(:first-of-type) {
+  word-break: break-word;
+}
+
+/* Dialog actions */
+.delete-form-dialog .MuiDialogActions-root {
+  padding: 16px 24px 20px;
+  border-top: 1px solid #f3f4f6;
+}
+
+/* Cancel button */
+.delete-form-dialog .MuiDialogActions-root button:first-child {
+  min-width: 100px;
+  color: #166534;
+  text-transform: none;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.delete-form-dialog .MuiDialogActions-root button:first-child:hover {
+  background-color: #f0fdf4;
+}
+
+/* Delete button */
+.delete-form-dialog .MuiDialogActions-root button:last-child {
+  min-width: 120px;
+  background-color: #dc2626;
+  text-transform: none;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: none;
+  transition: all 0.2s ease;
+}
+
+.delete-form-dialog .MuiDialogActions-root button:last-child:hover {
+  background-color: #b91c1c;
+  box-shadow: 0 4px 10px rgba(220, 38, 38, 0.2);
+}
+
+.delete-form-dialog .MuiDialogActions-root button:last-child:disabled {
+  background-color: #fca5a5;
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .delete-form-dialog .MuiDialogContent-root {
+    padding: 20px 20px 10px;
+  }
+
+  .delete-form-dialog .MuiDialogActions-root {
+    padding: 14px 18px 18px;
+  }
+}
+

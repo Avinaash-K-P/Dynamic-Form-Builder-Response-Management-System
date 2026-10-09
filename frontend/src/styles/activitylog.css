@@ -1,0 +1,312 @@
+/* ================================
+   Activity Logs Page
+================================ */
+
+.activity-logs-page {
+  width: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+/* ================================
+   Page Header
+================================ */
+
+.activity-logs-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.activity-logs-title {
+  color: #166534;
+  font-size: 28px !important;
+  font-weight: 750 !important;
+  margin-bottom: 8px !important;
+}
+
+.activity-logs-refresh {
+  color: #15803d !important;
+  border-color: #86b99a !important;
+  border-radius: 9px !important;
+  text-transform: none !important;
+  font-weight: 600 !important;
+}
+
+.activity-logs-refresh:hover {
+  background-color: #f0fdf4 !important;
+  border-color: #15803d !important;
+}
+
+/* ================================
+   Summary Card
+================================ */
+
+.activity-logs-summary {
+  max-width: 320px;
+  margin-bottom: 24px;
+  border: 1px solid #e5eee7;
+  border-radius: 14px !important;
+  box-shadow: 0 5px 18px rgba(22, 101, 52, 0.05) !important;
+}
+
+.activity-logs-summary .MuiCardContent-root {
+  padding: 22px !important;
+}
+
+.activity-logs-summary-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.activity-logs-summary-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.activity-logs-summary-icon svg {
+  font-size: 27px;
+}
+
+.activity-logs-total {
+  color: #166534;
+  font-weight: 750 !important;
+  margin-top: 5px !important;
+}
+
+/* ================================
+   Table Section
+================================ */
+
+.activity-logs-table-section {
+  width: 100%;
+  padding: 24px;
+  border: 1px solid #e5eee7;
+  border-radius: 14px !important;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.activity-logs-table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.activity-logs-table-header .MuiTypography-h6 {
+  color: #166534;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+/* ================================
+   Activity Table
+================================ */
+
+.activity-logs-table-container {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e5eee7;
+  border-radius: 10px;
+}
+
+.activity-logs-table-container .MuiTable-root {
+  min-width: 950px;
+}
+
+.activity-logs-table-container .MuiTableHead-root {
+  background-color: #f0fdf4;
+}
+
+.activity-logs-table-container .MuiTableHead-root .MuiTableCell-root {
+  color: #166534;
+  font-size: 12px;
+  font-weight: 750;
+  white-space: nowrap;
+  border-bottom: 1px solid #d7e3da;
+}
+
+.activity-logs-table-container .MuiTableBody-root .MuiTableCell-root {
+  padding: 15px 16px;
+  color: #475569;
+  font-size: 13px;
+  border-bottom-color: #edf2ee;
+}
+
+.activity-logs-table-container .MuiTableBody-root .MuiTableRow-root:last-child .MuiTableCell-root {
+  border-bottom: none;
+}
+
+.activity-logs-table-container .MuiTableBody-root .MuiTableRow-root:hover {
+  background-color: #f8fdf9;
+}
+
+/* ================================
+   Action Badge
+================================ */
+
+.activity-action-badge {
+  display: inline-block;
+  max-width: 180px;
+  padding: 5px 9px;
+  border-radius: 6px;
+  background-color: #dcfce7;
+  color: #166534;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* ================================
+   Description and Timestamp
+================================ */
+
+.activity-description {
+  min-width: 180px;
+  max-width: 280px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.6 !important;
+}
+
+.activity-timestamp {
+  min-width: 165px;
+  white-space: nowrap;
+}
+
+/* ================================
+   Loading and Empty States
+================================ */
+
+.activity-logs-loading,
+.activity-logs-empty {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 24px;
+  text-align: center;
+}
+
+.activity-logs-empty > svg {
+  font-size: 44px;
+  color: #86b99a;
+}
+
+.activity-logs-empty .MuiTypography-h6 {
+  color: #166534;
+  font-weight: 700;
+}
+
+/* ================================
+   Pagination
+================================ */
+
+.activity-logs-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+
+.activity-logs-pagination-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.activity-logs-pagination-actions .MuiButton-root {
+  border-radius: 8px;
+  border-color: #d7e3da;
+  color: #15803d;
+  text-transform: none;
+  font-weight: 600;
+}
+
+.activity-logs-pagination-actions .MuiButton-root:hover {
+  border-color: #15803d;
+  background-color: #f0fdf4;
+}
+
+.activity-logs-pagination-actions .MuiButton-root.Mui-disabled {
+  color: #a3b5a8;
+  border-color: #e5eee7;
+}
+
+/* ================================
+   Responsive Layout
+================================ */
+
+@media (max-width: 768px) {
+  .activity-logs-page {
+    padding: 18px;
+  }
+
+  .activity-logs-header {
+    align-items: flex-start;
+  }
+
+  .activity-logs-title {
+    font-size: 25px !important;
+  }
+
+  .activity-logs-summary {
+    max-width: 100%;
+  }
+
+  .activity-logs-table-section {
+    padding: 18px;
+  }
+
+  .activity-logs-pagination {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .activity-logs-pagination-actions {
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .activity-logs-page {
+    padding: 14px;
+  }
+
+  .activity-logs-header {
+    flex-direction: column;
+  }
+
+  .activity-logs-refresh {
+    align-self: flex-start;
+  }
+
+  .activity-logs-table-section {
+    padding: 14px;
+  }
+
+  .activity-logs-pagination-actions .MuiButton-root {
+    min-width: 0;
+    padding: 7px 10px;
+  }
+}
+
